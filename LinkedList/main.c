@@ -2,10 +2,16 @@
 #include <stdlib.h>
 #include "linked_list.h"
 
+int compare(int data1, int data2)
+{
+	return (data1 < data2) ? 1 : 0;
+}
+
 int main()
 {
 	List list;
 	initList(&list);
+	setSortRule(&list, compare);
 
 	insertElement(&list, 1);
 	insertElement(&list, 1);
