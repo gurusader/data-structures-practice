@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayList", "ArrayList\ArrayList.vcxproj", "{E110B266-3455-48CE-B385-29B2DC40BD2A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\LinkedList.vcxproj", "{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{E110B266-3455-48CE-B385-29B2DC40BD2A}.Release|x64.Build.0 = Release|x64
 		{E110B266-3455-48CE-B385-29B2DC40BD2A}.Release|x86.ActiveCfg = Release|Win32
 		{E110B266-3455-48CE-B385-29B2DC40BD2A}.Release|x86.Build.0 = Release|Win32
+		{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}.Debug|x64.ActiveCfg = Debug|x64
+		{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}.Debug|x64.Build.0 = Debug|x64
+		{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}.Debug|x86.ActiveCfg = Debug|Win32
+		{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}.Debug|x86.Build.0 = Debug|Win32
+		{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}.Release|x64.ActiveCfg = Release|x64
+		{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}.Release|x64.Build.0 = Release|x64
+		{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}.Release|x86.ActiveCfg = Release|Win32
+		{F5DDBA4E-B7C2-41E7-BC5C-7F3F2C67FEB1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
