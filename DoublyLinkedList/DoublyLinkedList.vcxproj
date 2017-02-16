@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="doubly_linked_list.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="doubly_linked_list.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D3A009D2-70FB-4DDC-942D-909234E0B4F8}</ProjectGuid>
     <RootNamespace>DoublyLinkedList</RootNamespace>
