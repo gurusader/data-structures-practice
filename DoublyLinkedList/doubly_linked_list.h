@@ -14,7 +14,7 @@ typedef struct _Node
 typedef struct _DoublyLinkedList
 {
 	Node* head;
-	Node* current;
+	Node* current_position;
 	int number_of_data;
 } DoublyLinkedList;
 
@@ -27,3 +27,5 @@ void insertElement(List* p_list, ListData data);
 bool getFirstElement(List* p_list, ListData* p_data);
 bool getNextElement(List* p_list, ListData* p_data);
 bool getPreviousElement(List* p_list, ListData* p_data);
+
+ListData removeElement(List* p_list);
