@@ -56,11 +56,6 @@ int main()
 		{
 			printf("%d ", data);
 		}
-
-		while (getPreviousElement(&list, &data))
-		{
-			printf("%d ", data);
-		}
 	}
 
 	puts("");

@@ -7,14 +7,14 @@ typedef int ListData;
 typedef struct _Node
 {
 	ListData data;
-	struct _Node* next_node;
 	struct _Node* pre_node;
+	struct _Node* next_node;
 } Node;
 
 typedef struct _DoublyLinkedList
 {
 	Node* head;
-	Node* current_position;
+	Node* current;
 	int number_of_data;
 } DoublyLinkedList;
 
