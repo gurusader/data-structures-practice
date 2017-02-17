@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="array_stack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="array_stack.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4B35A186-65B4-48EE-81B6-97B3E763B165}</ProjectGuid>
     <RootNamespace>ArrayStack</RootNamespace>
@@ -109,8 +115,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
