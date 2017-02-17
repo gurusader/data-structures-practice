@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 #include "circular_linked_list.h"
 
 void initList(List* p_list)
@@ -17,7 +18,9 @@ void insertElementHead(List* p_list, ListData data)
 	if (p_list->tail == NULL)
 	{
 		p_list->tail = new_node;
-		new_node->next_node = new_node; // 처음 삽입한 노드의 다음 노드는 자기 자신이다.
+
+		// 처음 삽입한 노드의 다음 노드는 자기 자신이다.
+		new_node->next_node = new_node;
 	}
 	else
 	{
@@ -42,32 +45,36 @@ void insertElementTail(List* p_list, ListData data)
 	{
 		new_node->next_node = p_list->tail->next_node;
 		p_list->tail->next_node = new_node;
-		p_list->tail = new_node; // tail이 새로 삽입한 노드를 가리킨다.
+
+		// tail이 새로 삽입한 노드를 가리킨다.
+		p_list->tail = new_node;
 	}
 
 	p_list->number_of_data++;
 }
 
-Bool getFirstElement(List* p_list, ListData* p_data)
+bool getFirstElement(List* p_list, ListData* p_data)
 {
-	Bool result = FALSE;
+	bool result = false;
 
 	if (p_list->tail != NULL)
 	{
 		p_list->before = p_list->tail;
-		p_list->current = p_list->tail->next_node; // tail의 다음 노드는 첫 노드이다.
+
+		// tail의 다음 노드는 첫 노드이다.
+		p_list->current = p_list->tail->next_node;
 
 		*p_data = p_list->current->data;
 
-		result = TRUE;
+		result = true;
 	}
 
 	return result;
 }
 
-Bool getNextElement(List* p_list, ListData* p_data)
+bool getNextElement(List* p_list, ListData* p_data)
 {
-	Bool result = FALSE;
+	bool result = false;
 
 	if (p_list->tail != NULL)
 	{
@@ -76,7 +83,7 @@ Bool getNextElement(List* p_list, ListData* p_data)
 
 		*p_data = p_list->current->data;
 
-		result = TRUE;
+		result = true;
 	}
 
 	return result;

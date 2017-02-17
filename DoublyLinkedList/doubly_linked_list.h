@@ -1,8 +1,6 @@
 #pragma once
 
-typedef int Bool;
-#define TRUE 1
-#define FALSE 0
+#include <stdbool.h>
 
 typedef int ListData;
 
@@ -26,6 +24,6 @@ void initList(List* p_list);
 
 void insertElement(List* p_list, ListData data);
 
-Bool getFirstElement(List* p_list, ListData* p_data);
-Bool getNextElement(List* p_list, ListData* p_data);
-Bool getPreviousElement(List* p_list, ListData* p_data);
+bool getFirstElement(List* p_list, ListData* p_data);
+bool getNextElement(List* p_list, ListData* p_data);
+bool getPreviousElement(List* p_list, ListData* p_data);

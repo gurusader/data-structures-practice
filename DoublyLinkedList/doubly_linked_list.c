@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 #include "doubly_linked_list.h"
 
 void initList(List* p_list)
@@ -15,7 +16,8 @@ void insertElement(List* p_list, ListData data)
 
 	new_node->next_node = p_list->head;
 	new_node->pre_node = NULL;
-	if (p_list->head != NULL) // 두 번째 노드부터 삽입할 때 이전 노드가 새 노드를 가리킨다.
+
+	if (p_list->head != NULL)
 	{
 		p_list->head->pre_node = new_node;
 	}
@@ -24,43 +26,43 @@ void insertElement(List* p_list, ListData data)
 	p_list->number_of_data++;
 }
 
-Bool getFirstElement(List* p_list, ListData* p_data)
+bool getFirstElement(List* p_list, ListData* p_data)
 {
-	Bool result = FALSE;
+	bool result = false;
 
 	if (p_list->head != NULL)
 	{
 		p_list->current = p_list->head;
 		*p_data = p_list->current->data;
-		result = TRUE;
+		result = true;
 	}
 
 	return result;
 }
 
-Bool getNextElement(List* p_list, ListData* p_data)
+bool getNextElement(List* p_list, ListData* p_data)
 {
-	Bool result = FALSE;
+	bool result = false;
 
 	if (p_list->current->next_node != NULL)
 	{
 		p_list->current = p_list->current->next_node;
 		*p_data = p_list->current->data;
-		result = TRUE;
+		result = true;
 	}
 
 	return result;
 }
 
-Bool getPreviousElement(List* p_list, ListData* p_data)
+bool getPreviousElement(List* p_list, ListData* p_data)
 {
-	Bool result = FALSE;
+	bool result = false;
 
 	if (p_list->current->pre_node != NULL)
 	{
 		p_list->current = p_list->current->pre_node;
 		*p_data = p_list->current->data;
-		result = TRUE;
+		result = true;
 	}
 
 	return result;
