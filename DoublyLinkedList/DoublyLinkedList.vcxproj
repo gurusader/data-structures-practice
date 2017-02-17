@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="doubly_linked_list.c" />
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D3A009D2-70FB-4DDC-942D-909234E0B4F8}</ProjectGuid>
