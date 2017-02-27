@@ -4,7 +4,7 @@
 
 int compare(int data1, int data2)
 {
-	return (data1 < data2) ? 1 : 0;
+	return data2 - data1;
 }
 
 int main()

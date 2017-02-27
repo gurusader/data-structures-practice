@@ -10,7 +10,7 @@ void initStack(Stack* p_stack)
 
 bool isEmpty(Stack* p_stack)
 {
-	return (p_stack->top_index == -1);
+	return p_stack->top_index == -1;
 }
 
 void push(Stack* p_stack, StackData data)
@@ -33,13 +33,11 @@ StackData pop(Stack* p_stack)
 		puts("Stack is empty.");
 		exit(-1);
 	}
-	else
-	{
-		StackData data = p_stack->array[p_stack->top_index];
-		p_stack->top_index--;
 
-		return data;
-	}
+	StackData data = p_stack->array[p_stack->top_index];
+	p_stack->top_index--;
+
+	return data;
 }
 
 StackData peek(Stack* p_stack)

@@ -29,16 +29,14 @@ StackData pop(Stack* p_stack)
 		puts("Stack is empty.");
 		exit(-1);
 	}
-	else
-	{
-		Node* removed_node = p_stack->head;
-		StackData removed_data = p_stack->head->data;
 
-		p_stack->head = p_stack->head->next_node;
+	Node* removed_node = p_stack->head;
+	StackData removed_data = p_stack->head->data;
 
-		free(removed_node);
-		return removed_data;
-	}
+	p_stack->head = p_stack->head->next_node;
+
+	free(removed_node);
+	return removed_data;
 }
 
 StackData peek(Stack* p_stack)
@@ -48,8 +46,6 @@ StackData peek(Stack* p_stack)
 		puts("Stack is empty.");
 		exit(-1);
 	}
-	else
-	{
-		return p_stack->head->data;
-	}
+
+	return p_stack->head->data;
 }

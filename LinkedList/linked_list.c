@@ -9,7 +9,6 @@ void initList(List* p_list)
 {
 	// head는 더미 노드를 가리킨다.
 	p_list->head = (Node*)malloc(sizeof(Node));
-
 	p_list->head->next_node = NULL;
 	p_list->number_of_data = 0;
 	p_list->compare = NULL;
@@ -98,7 +97,7 @@ ListData removeElement(List* p_list)
 	return removed_data;
 }
 
-void setSortRule(List* p_list, int (*compare)(ListData data1, ListData data2))
+void setSortRule(List* p_list, Compare compare)
 {
 	p_list->compare = compare;
 }

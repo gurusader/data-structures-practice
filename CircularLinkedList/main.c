@@ -7,12 +7,12 @@ int main()
 	List list;
 	initList(&list);
 
-	insertElementTail(&list, 1);
-	insertElementTail(&list, 2);
-	insertElementTail(&list, 3);
 	insertElementHead(&list, 4);
 	insertElementHead(&list, 5);
 	insertElementHead(&list, 6);
+	insertElementTail(&list, 1);
+	insertElementTail(&list, 2);
+	insertElementTail(&list, 3);
 
 	ListData data;
 	if (getFirstElement(&list, &data))

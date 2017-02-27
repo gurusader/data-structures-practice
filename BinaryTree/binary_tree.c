@@ -1,8 +1,8 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "binary_tree.h"
-#include <stdio.h>
 
-Tree* makeTree(Data data)
+Tree* makeTree(TreeData data)
 {
 	Tree* new_tree = (Tree*)malloc(sizeof(Tree));
 	new_tree->data = data;
@@ -11,12 +11,12 @@ Tree* makeTree(Data data)
 	return new_tree;
 }
 
-Data getData(Tree* p_tree)
+TreeData getTreeData(Tree* p_tree)
 {
 	return p_tree->data;
 }
 
-void setData(Tree* p_tree, Data data)
+void setTreeData(Tree* p_tree, TreeData data)
 {
 	p_tree->data = data;
 }
@@ -57,12 +57,10 @@ void preorderTraverse(Tree* p_tree)
 	{
 		return;
 	}
-	else
-	{
-		printf("%d ", p_tree->data);
-		preorderTraverse(p_tree->left);
-		preorderTraverse(p_tree->right);
-	}
+
+	printf("%d ", p_tree->data);
+	preorderTraverse(p_tree->left);
+	preorderTraverse(p_tree->right);
 }
 
 void deleteTree(Tree* p_tree)
@@ -71,10 +69,8 @@ void deleteTree(Tree* p_tree)
 	{
 		return;
 	}
-	else
-	{
-		deleteTree(p_tree->left);
-		deleteTree(p_tree->right);
-		free(p_tree);
-	}
+
+	deleteTree(p_tree->left);
+	deleteTree(p_tree->right);
+	free(p_tree);
 }

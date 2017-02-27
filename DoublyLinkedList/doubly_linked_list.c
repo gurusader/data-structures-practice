@@ -44,20 +44,6 @@ bool getFirstElement(List* p_list, ListData* p_data)
 	return result;
 }
 
-bool getNextElement(List* p_list, ListData* p_data)
-{
-	bool result = false;
-
-	if (p_list->current->next_node != NULL)
-	{
-		p_list->current = p_list->current->next_node;
-		*p_data = p_list->current->data;
-		result = true;
-	}
-
-	return result;
-}
-
 bool getPreviousElement(List* p_list, ListData* p_data)
 {
 	bool result = false;
@@ -65,6 +51,20 @@ bool getPreviousElement(List* p_list, ListData* p_data)
 	if (p_list->current->pre_node != p_list->head)
 	{
 		p_list->current = p_list->current->pre_node;
+		*p_data = p_list->current->data;
+		result = true;
+	}
+
+	return result;
+}
+
+bool getNextElement(List* p_list, ListData* p_data)
+{
+	bool result = false;
+
+	if (p_list->current->next_node != NULL)
+	{
+		p_list->current = p_list->current->next_node;
 		*p_data = p_list->current->data;
 		result = true;
 	}
@@ -82,6 +82,8 @@ ListData removeElement(List* p_list)
 		removed_node->next_node->pre_node = removed_node->pre_node;
 	}
 	removed_node->pre_node->next_node = removed_node->next_node;
+
+	p_list->current = p_list->current->pre_node;
 
 	free(removed_node);
 	p_list->number_of_data--;

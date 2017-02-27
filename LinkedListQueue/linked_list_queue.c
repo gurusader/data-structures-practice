@@ -42,16 +42,14 @@ QueueData deQueue(Queue* p_queue)
 		puts("Queue is empty.");
 		exit(-1);
 	}
-	else
-	{
-		removed_node = p_queue->front;
-		removed_data = removed_node->data;
-		p_queue->front = p_queue->front->next_node;
 
-		free(removed_node);
+	removed_node = p_queue->front;
+	removed_data = removed_node->data;
+	p_queue->front = p_queue->front->next_node;
 
-		return removed_data;
-	}
+	free(removed_node);
+
+	return removed_data;
 }
 
 QueueData peek(Queue* p_queue)
@@ -61,8 +59,6 @@ QueueData peek(Queue* p_queue)
 		puts("Queue is empty.");
 		exit(-1);
 	}
-	else
-	{
-		return p_queue->front->data;
-	}
+
+	return p_queue->front->data;
 }

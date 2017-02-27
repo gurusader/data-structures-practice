@@ -5,8 +5,8 @@
 void initList(List* p_list)
 {
 	p_list->tail = NULL;
-	p_list->current = NULL;
 	p_list->before = NULL;
+	p_list->current = NULL;
 	p_list->number_of_data = 0;
 }
 

@@ -1,21 +1,20 @@
 #pragma once
 
-typedef int BinaryTreeData;
-typedef BinaryTreeData Data;
+typedef int TreeData;
 
 typedef struct _BinaryTree
 {
-	Data data;
+	TreeData data;
 	struct _BinaryTree* left;
 	struct _BinaryTree* right;
 } BinaryTree;
 
 typedef BinaryTree Tree;
 
-Tree* makeTree(Data data);
+Tree* makeTree(TreeData data);
 
-Data getData(Tree* p_tree);
-void setData(Tree* p_tree, Data data);
+TreeData getTreeData(Tree* p_tree);
+void setTreeData(Tree* p_tree, TreeData data);
 
 Tree* getLeftSubTree(Tree* p_tree);
 void setLeftSubTree(Tree* p_tree_parent, Tree* p_tree_child);

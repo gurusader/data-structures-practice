@@ -13,8 +13,8 @@ typedef struct _Node
 typedef struct _CircularLinkedList
 {
 	Node* tail;
-	Node* current;
 	Node* before;
+	Node* current;
 	int number_of_data;
 } CircularLinkedList;
 

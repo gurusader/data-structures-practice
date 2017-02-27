@@ -11,5 +11,5 @@
 
 ### Notes
 - This project is only tested on Windows.
-- The Codes in this project follow C99 syntax.
+- The codes in this project follow C99 syntax.
 - *.sln, *.vcxproj, *.vcxproj.filters files are Visual Studio config files.

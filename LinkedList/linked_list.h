@@ -10,15 +10,16 @@ typedef struct _Node
 	struct _Node* next_node;
 } Node;
 
+// 비교 기준을 지정하기 위한 함수 포인터.
+typedef int (*Compare)(ListData data1, ListData data2);
+
 typedef struct _LinkedList
 {
 	Node* head;
-	Node* current;
 	Node* before;
+	Node* current;
 	int number_of_data;
-
-	// 비교 기준을 지정하기 위한 함수 포인터.
-	int (*compare)(ListData data1, ListData data2);
+	Compare compare;
 } LinkedList;
 
 typedef LinkedList List;
@@ -32,4 +33,4 @@ bool getNextElement(List* p_list, ListData* p_data);
 
 ListData removeElement(List* p_list);
 
-void setSortRule(List* p_list, int (*compare)(ListData data1, ListData data2));
+void setSortRule(List* p_list, Compare compare);

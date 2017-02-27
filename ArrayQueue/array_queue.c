@@ -35,11 +35,9 @@ QueueData deQueue(Queue* p_queue)
 		puts("Queue is empty.");
 		exit(-1);
 	}
-	else
-	{
-		p_queue->front = getNextIndex(p_queue->front);
-		return p_queue->array[p_queue->front];
-	}
+
+	p_queue->front = getNextIndex(p_queue->front);
+	return p_queue->array[p_queue->front];
 }
 
 QueueData peek(Queue* p_queue)
@@ -49,10 +47,8 @@ QueueData peek(Queue* p_queue)
 		puts("Queue is empty.");
 		exit(-1);
 	}
-	else
-	{
-		return p_queue->array[getNextIndex(p_queue->front)];
-	}
+
+	return p_queue->array[getNextIndex(p_queue->front)];
 }
 
 int getNextIndex(int index)
