@@ -6,8 +6,8 @@
 ### Naming Convention
 - user defined type: PascalCase
 - function: camelCase
-- macro: UPPERCASE and underbar(_)
-- variable: lowercase and underbar(_)
+- macro: UPPER_SNAKE_CASE
+- variable: lower_snake_case
 
 ### Notes
 - This project is only tested on Windows.
